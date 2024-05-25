@@ -30,7 +30,7 @@ export const registerUser = (userData) => async (dispatch) => {
         dispatch(registerRequest())
 
 
-        const { data } = await axios.post('http://localhost:5000/api/register', userData)
+        const { data } = await axios.post('https://presidio-assignment-backend.onrender.com/api/register', userData)
 
         dispatch(registerSuccess())
         localStorage.setItem('accesstoken', data.token)
