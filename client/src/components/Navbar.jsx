@@ -41,7 +41,7 @@ export const Navbar = () => {
 
                     <ul className='flex justify-between'>
                         <div>
-                            <Link className='text-gray-300 text-lg font-bold' to="/">Test</Link>
+                            <Link className='text-gray-300 text-lg font-bold' to="/">Rentify</Link>
                         </div>
 
                         <button onClick={()=>setToggle(!toggle)} className='md:hidden flex text-gray-300 text-lg font-bold'>

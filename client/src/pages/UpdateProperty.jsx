@@ -34,7 +34,7 @@ export const UpdateProperty = () => {
   useEffect(() => {
     const fetchPropertyData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/getSingleProperty/${id}`, config);
+        const response = await axios.get(`https://presidio-assignment-backend.onrender.com/api/getSingleProperty/${id}`, config);
         const property = response.data.data;
         setPropertyInfo(property.info);
         setArea(property.area);
@@ -56,7 +56,7 @@ export const UpdateProperty = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:5000/api/updateProperty/${id}`, {
+      const response = await axios.put(`https://presidio-assignment-backend.onrender.com/api/updateProperty/${id}`, {
         info: propertyInfo,
         area: area,
         bedrooms: bedrooms,

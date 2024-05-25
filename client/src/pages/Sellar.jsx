@@ -28,7 +28,7 @@ export const Seller = () => {
     useEffect(() => {
         const checkSellerStatus = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/isSeller', config);
+                const response = await axios.get('https://presidio-assignment-backend.onrender.com/api/isSeller', config);
                 if (!response.data.isSeller) {
                     toast.error('You are not a seller');
                     navigate("/properties");
@@ -42,7 +42,7 @@ export const Seller = () => {
 
         const fetchSellerProperties = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/getAllPropertiesOfSeller', config);
+                const response = await axios.get('https://presidio-assignment-backend.onrender.com/api/getAllPropertiesOfSeller', config);
                 setProperties(response.data.data);
                 setLoading(false);
             } catch (error) {
@@ -56,7 +56,7 @@ export const Seller = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/deleteProperty/${id}`, config);
+            await axios.delete(`https://presidio-assignment-backend.onrender.com/api/deleteProperty/${id}`, config);
             toast.success('Property deleted successfully');
             fetchSellerProperties();
         } catch (error) {

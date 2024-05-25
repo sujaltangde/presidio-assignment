@@ -34,7 +34,7 @@ export const AddProperty = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/addProperty', {
+      const response = await axios.post('https://presidio-assignment-backend.onrender.com/api/addProperty', {
         info: propertyInfo,
         area: area,
         bedrooms: bedrooms,

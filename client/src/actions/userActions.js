@@ -13,7 +13,7 @@ export const loginUser = (userData) => async (dispatch) => {
         dispatch(loginRequest())
 
 
-        const { data } = await axios.post('http://localhost:5000/api/login', userData)
+        const { data } = await axios.post('https://presidio-assignment-backend.onrender.com/api/login', userData)
 
         dispatch(loginSuccess())
       
@@ -55,7 +55,7 @@ export const IsLogin = () => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.get('http://localhost:5000/api/isLogin', config)
+        const { data } = await axios.get('https://presidio-assignment-backend.onrender.com/api/isLogin', config)
 
         dispatch(isLoginSuccess(data))
     
@@ -75,7 +75,7 @@ export const IsSeller = () => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.get('http://localhost:5000/api/isSeller', config)
+        const { data } = await axios.get('https://presidio-assignment-backend.onrender.com/api/isSeller', config)
 
         dispatch(isSellerSuccess(data))
 

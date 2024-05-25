@@ -28,7 +28,7 @@ export const Properties = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/getAllProperties', config);
+                const response = await axios.get('https://presidio-assignment-backend.onrender.com/api/getAllProperties', config);
                 setProperties(response.data.data);
                 setLoading(false); 
             } catch (error) {
